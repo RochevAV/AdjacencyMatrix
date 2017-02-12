@@ -1,47 +1,56 @@
 ### Swift dependencies file v0 ###
 provides-top-level:
+- "Edge"
 - "Matrix"
 provides-nominal:
+- "V15AdjacencyMatrix4Edge"
 - "C15AdjacencyMatrix6Matrix"
 provides-member:
+- ["V15AdjacencyMatrix4Edge", ""]
 - ["C15AdjacencyMatrix6Matrix", ""]
 provides-dynamic-lookup:
 depends-top-level:
-- !private "-"
-- !private "Double"
-- "AssignmentPrecedence"
-- "Int"
-- "String"
-- !private ">"
-- !private "FloatLiteralType"
-- !private "sqrt"
 - !private "..<"
-- "Matrix"
 - !private "*"
-- !private "IntegerLiteralType"
+- "String"
+- "AssignmentPrecedence"
+- "UInt8"
+- "Matrix"
+- "Edge"
+- "TernaryPrecedence"
+- !private "!="
 - !private "+="
-- !private "UInt"
+- "Array"
+- !private "sqrt"
+- "Int"
+- "UInt"
+- !private "max"
 - !private "..."
 - "CustomStringConvertible"
-- "UInt8"
-- !private "StringLiteralType"
-- !private "Array"
-- !private "UnicodeScalarType"
 - !private "+"
+- !private "StringLiteralType"
+- !private "UnicodeScalarType"
+- !private "Double"
+- !private "-"
 depends-member:
 - !private ["Ps16AbsoluteValuable", "init"]
+- !private ["Ps9AnyObject", "Array"]
 - !private ["Ps9AnyObject", "Double"]
+- !private ["Ps9AnyObject", "Edge"]
 - !private ["Ps9AnyObject", "Int"]
 - !private ["Ps9AnyObject", "Matrix"]
 - !private ["Ps9AnyObject", "UInt"]
 - !private ["Ps9AnyObject", "UInt8"]
 - !private ["Ps9AnyObject", "components"]
 - !private ["Ps9AnyObject", "confinesFor"]
+- !private ["Ps9AnyObject", "countVertex"]
 - ["Ps9AnyObject", "description"]
+- !private ["Ps9AnyObject", "edgesFor"]
+- !private ["Ps9AnyObject", "emptyMatrix"]
 - !private ["Ps9AnyObject", "init"]
 - !private ["Ps9AnyObject", "matrix"]
 - !private ["Ps9AnyObject", "matrixFrom"]
-- !private ["Ps9AnyObject", "nodesFor"]
+- !private ["Ps9AnyObject", "max"]
 - !private ["Ps9AnyObject", "sizeSquareMatrixFor"]
 - !private ["Ps9AnyObject", "sqrt"]
 - !private ["Ps9AnyObject", "uint8Array"]
@@ -56,10 +65,12 @@ depends-member:
 - ["Sa", "deinit"]
 - !private ["Sa", "enumerated"]
 - !private ["Sa", "flatMap"]
+- !private ["Sa", "init"]
+- !private ["Sa", "isEmpty"]
 - !private ["Sa", "subscript"]
 - !private ["Vs10ArraySlice", "Iterator"]
 - !private ["Vs10ArraySlice", "_Element"]
-- !private ["Vs10ArraySlice", "deinit"]
+- ["Vs10ArraySlice", "deinit"]
 - !private ["Vs10ArraySlice", "enumerated"]
 - !private ["Ps23BidirectionalCollection", "Index"]
 - !private ["Ps23BidirectionalCollection", "IndexDistance"]
@@ -71,6 +82,8 @@ depends-member:
 - !private ["Ps23BidirectionalCollection", "count"]
 - !private ["Ps23BidirectionalCollection", "enumerated"]
 - !private ["Ps23BidirectionalCollection", "flatMap"]
+- !private ["Ps23BidirectionalCollection", "init"]
+- !private ["Ps23BidirectionalCollection", "isEmpty"]
 - !private ["Ps23BidirectionalCollection", "subscript"]
 - !private ["Ps22BidirectionalIndexable", "Index"]
 - !private ["Ps22BidirectionalIndexable", "IndexDistance"]
@@ -82,6 +95,8 @@ depends-member:
 - !private ["Ps22BidirectionalIndexable", "count"]
 - !private ["Ps22BidirectionalIndexable", "enumerated"]
 - !private ["Ps22BidirectionalIndexable", "flatMap"]
+- !private ["Ps22BidirectionalIndexable", "init"]
+- !private ["Ps22BidirectionalIndexable", "isEmpty"]
 - !private ["Ps22BidirectionalIndexable", "subscript"]
 - !private ["Vs18BidirectionalSlice", "Index"]
 - !private ["Vs18BidirectionalSlice", "IndexDistance"]
@@ -110,6 +125,7 @@ depends-member:
 - !private ["Ps7CVarArg", "enumerated"]
 - !private ["Ps7CVarArg", "flatMap"]
 - !private ["Ps7CVarArg", "init"]
+- !private ["Ps7CVarArg", "isEmpty"]
 - !private ["Ps7CVarArg", "subscript"]
 - !private ["Vs9Character", "deinit"]
 - !private ["V10Foundation12CharacterSet", "deinit"]
@@ -123,13 +139,18 @@ depends-member:
 - !private ["Ps10Collection", "count"]
 - !private ["Ps10Collection", "enumerated"]
 - !private ["Ps10Collection", "flatMap"]
+- !private ["Ps10Collection", "init"]
+- !private ["Ps10Collection", "isEmpty"]
 - !private ["Ps10Collection", "subscript"]
 - !private ["Ps10Comparable", "IntegerLiteralType"]
 - !private ["Ps10Comparable", "Stride"]
 - !private ["Ps10Comparable", "_DisabledRangeIndex"]
 - !private ["Ps10Comparable", "components"]
 - !private ["Ps10Comparable", "init"]
-- !private ["Vs20CountableClosedRange", "deinit"]
+- ["Vs20CountableClosedRange", "deinit"]
+- !private ["Vs14CountableRange", "Iterator"]
+- !private ["Vs14CountableRange", "_Element"]
+- !private ["Vs14CountableRange", "deinit"]
 - !private ["Ps28CustomDebugStringConvertible", "Index"]
 - !private ["Ps28CustomDebugStringConvertible", "IndexDistance"]
 - !private ["Ps28CustomDebugStringConvertible", "Iterator"]
@@ -141,6 +162,7 @@ depends-member:
 - !private ["Ps28CustomDebugStringConvertible", "enumerated"]
 - !private ["Ps28CustomDebugStringConvertible", "flatMap"]
 - !private ["Ps28CustomDebugStringConvertible", "init"]
+- !private ["Ps28CustomDebugStringConvertible", "isEmpty"]
 - !private ["Ps28CustomDebugStringConvertible", "subscript"]
 - !private ["Ps29CustomPlaygroundQuickLookable", "IntegerLiteralType"]
 - !private ["Ps29CustomPlaygroundQuickLookable", "Stride"]
@@ -163,8 +185,11 @@ depends-member:
 - !private ["Ps17CustomReflectable", "enumerated"]
 - !private ["Ps17CustomReflectable", "flatMap"]
 - !private ["Ps17CustomReflectable", "init"]
+- !private ["Ps17CustomReflectable", "isEmpty"]
 - !private ["Ps17CustomReflectable", "subscript"]
+- !private ["Ps23CustomStringConvertible", "Array"]
 - !private ["Ps23CustomStringConvertible", "Double"]
+- !private ["Ps23CustomStringConvertible", "Edge"]
 - !private ["Ps23CustomStringConvertible", "Index"]
 - !private ["Ps23CustomStringConvertible", "IndexDistance"]
 - !private ["Ps23CustomStringConvertible", "Int"]
@@ -182,17 +207,23 @@ depends-member:
 - !private ["Ps23CustomStringConvertible", "components"]
 - !private ["Ps23CustomStringConvertible", "confinesFor"]
 - !private ["Ps23CustomStringConvertible", "count"]
+- !private ["Ps23CustomStringConvertible", "countVertex"]
 - ["Ps23CustomStringConvertible", "description"]
+- !private ["Ps23CustomStringConvertible", "edgesFor"]
+- !private ["Ps23CustomStringConvertible", "emptyMatrix"]
 - !private ["Ps23CustomStringConvertible", "enumerated"]
 - !private ["Ps23CustomStringConvertible", "flatMap"]
 - !private ["Ps23CustomStringConvertible", "init"]
+- !private ["Ps23CustomStringConvertible", "isEmpty"]
 - !private ["Ps23CustomStringConvertible", "matrix"]
 - !private ["Ps23CustomStringConvertible", "matrixFrom"]
-- !private ["Ps23CustomStringConvertible", "nodesFor"]
+- !private ["Ps23CustomStringConvertible", "max"]
 - !private ["Ps23CustomStringConvertible", "sizeSquareMatrixFor"]
 - !private ["Ps23CustomStringConvertible", "sqrt"]
 - !private ["Ps23CustomStringConvertible", "subscript"]
 - !private ["Ps23CustomStringConvertible", "uint8Array"]
+- !private ["Ps23CustomStringConvertible", "vertex1"]
+- !private ["Ps23CustomStringConvertible", "vertex2"]
 - ["Ps23CustomStringConvertible", ""]
 - !private ["Vs27DefaultBidirectionalIndices", "Index"]
 - !private ["Vs27DefaultBidirectionalIndices", "Iterator"]
@@ -206,12 +237,21 @@ depends-member:
 - !private ["Vs26DefaultRandomAccessIndices", "_Element"]
 - !private ["Sd", "deinit"]
 - !private ["Sd", "init"]
+- ["V15AdjacencyMatrix4Edge", "String"]
+- ["V15AdjacencyMatrix4Edge", "UInt"]
+- ["V15AdjacencyMatrix4Edge", "deinit"]
+- ["V15AdjacencyMatrix4Edge", "description"]
+- ["V15AdjacencyMatrix4Edge", "init"]
+- ["V15AdjacencyMatrix4Edge", "vertex1"]
+- ["V15AdjacencyMatrix4Edge", "vertex2"]
 - !private ["Vs18EnumeratedIterator", "Element"]
 - !private ["Vs18EnumeratedSequence", "Iterator"]
 - ["Vs18EnumeratedSequence", "deinit"]
 - !private ["Ps9Equatable", "IntegerLiteralType"]
+- !private ["Ps9Equatable", "Iterator"]
 - !private ["Ps9Equatable", "Stride"]
 - !private ["Ps9Equatable", "_DisabledRangeIndex"]
+- !private ["Ps9Equatable", "_Element"]
 - !private ["Ps9Equatable", "_getBuiltinLogicValue"]
 - !private ["Ps9Equatable", "components"]
 - !private ["Ps9Equatable", "init"]
@@ -224,6 +264,8 @@ depends-member:
 - !private ["Ps25ExpressibleByArrayLiteral", "count"]
 - !private ["Ps25ExpressibleByArrayLiteral", "enumerated"]
 - !private ["Ps25ExpressibleByArrayLiteral", "flatMap"]
+- !private ["Ps25ExpressibleByArrayLiteral", "init"]
+- !private ["Ps25ExpressibleByArrayLiteral", "isEmpty"]
 - !private ["Ps25ExpressibleByArrayLiteral", "subscript"]
 - !private ["Ps27ExpressibleByBooleanLiteral", "_getBuiltinLogicValue"]
 - !private ["Ps43ExpressibleByExtendedGraphemeClusterLiteral", "components"]
@@ -258,6 +300,8 @@ depends-member:
 - !private ["Ps9Indexable", "count"]
 - !private ["Ps9Indexable", "enumerated"]
 - !private ["Ps9Indexable", "flatMap"]
+- !private ["Ps9Indexable", "init"]
+- !private ["Ps9Indexable", "isEmpty"]
 - !private ["Ps9Indexable", "subscript"]
 - !private ["Ps13IndexableBase", "Index"]
 - !private ["Ps13IndexableBase", "IndexDistance"]
@@ -269,6 +313,8 @@ depends-member:
 - !private ["Ps13IndexableBase", "count"]
 - !private ["Ps13IndexableBase", "enumerated"]
 - !private ["Ps13IndexableBase", "flatMap"]
+- !private ["Ps13IndexableBase", "init"]
+- !private ["Ps13IndexableBase", "isEmpty"]
 - !private ["Ps13IndexableBase", "subscript"]
 - !private ["Vs16IndexingIterator", "Element"]
 - !private ["Si", "IntegerLiteralType"]
@@ -292,22 +338,25 @@ depends-member:
 - !private ["Ps25LosslessStringConvertible", "_getBuiltinLogicValue"]
 - !private ["Ps25LosslessStringConvertible", "components"]
 - !private ["Ps25LosslessStringConvertible", "init"]
-- !private ["C15AdjacencyMatrix6Matrix", "Array"]
+- ["C15AdjacencyMatrix6Matrix", "Array"]
 - !private ["C15AdjacencyMatrix6Matrix", "Double"]
+- ["C15AdjacencyMatrix6Matrix", "Edge"]
 - ["C15AdjacencyMatrix6Matrix", "Int"]
 - !private ["C15AdjacencyMatrix6Matrix", "Matrix"]
 - ["C15AdjacencyMatrix6Matrix", "String"]
 - !private ["C15AdjacencyMatrix6Matrix", "UInt"]
 - ["C15AdjacencyMatrix6Matrix", "UInt8"]
 - !private ["C15AdjacencyMatrix6Matrix", "confinesFor"]
-- ["C15AdjacencyMatrix6Matrix", "countNodes"]
+- ["C15AdjacencyMatrix6Matrix", "countVertex"]
 - ["C15AdjacencyMatrix6Matrix", "deinit"]
 - ["C15AdjacencyMatrix6Matrix", "description"]
+- ["C15AdjacencyMatrix6Matrix", "edges"]
+- ["C15AdjacencyMatrix6Matrix", "edgesFor"]
+- !private ["C15AdjacencyMatrix6Matrix", "emptyMatrix"]
 - ["C15AdjacencyMatrix6Matrix", "init"]
 - ["C15AdjacencyMatrix6Matrix", "matrix"]
 - !private ["C15AdjacencyMatrix6Matrix", "matrixFrom"]
-- ["C15AdjacencyMatrix6Matrix", "nodes"]
-- ["C15AdjacencyMatrix6Matrix", "nodesFor"]
+- !private ["C15AdjacencyMatrix6Matrix", "max"]
 - !private ["C15AdjacencyMatrix6Matrix", "sizeSquareMatrixFor"]
 - !private ["C15AdjacencyMatrix6Matrix", "sqrt"]
 - !private ["C15AdjacencyMatrix6Matrix", "uint8Array"]
@@ -325,6 +374,8 @@ depends-member:
 - !private ["Ps17MutableCollection", "count"]
 - !private ["Ps17MutableCollection", "enumerated"]
 - !private ["Ps17MutableCollection", "flatMap"]
+- !private ["Ps17MutableCollection", "init"]
+- !private ["Ps17MutableCollection", "isEmpty"]
 - !private ["Ps17MutableCollection", "subscript"]
 - !private ["Ps16MutableIndexable", "Index"]
 - !private ["Ps16MutableIndexable", "IndexDistance"]
@@ -335,6 +386,8 @@ depends-member:
 - !private ["Ps16MutableIndexable", "count"]
 - !private ["Ps16MutableIndexable", "enumerated"]
 - !private ["Ps16MutableIndexable", "flatMap"]
+- !private ["Ps16MutableIndexable", "init"]
+- !private ["Ps16MutableIndexable", "isEmpty"]
 - !private ["Ps16MutableIndexable", "subscript"]
 - !private ["Vs12MutableSlice", "Iterator"]
 - !private ["Vs12MutableSlice", "_Element"]
@@ -354,7 +407,7 @@ depends-member:
 - !private ["CSo8NSString", "components"]
 - !private ["CSo8NSString", "init"]
 - !private ["Sq", "Iterator"]
-- !private ["Sq", "deinit"]
+- ["Sq", "deinit"]
 - !private ["Ps22RandomAccessCollection", "Index"]
 - !private ["Ps22RandomAccessCollection", "IndexDistance"]
 - !private ["Ps22RandomAccessCollection", "Indices"]
@@ -365,6 +418,8 @@ depends-member:
 - !private ["Ps22RandomAccessCollection", "count"]
 - !private ["Ps22RandomAccessCollection", "enumerated"]
 - !private ["Ps22RandomAccessCollection", "flatMap"]
+- !private ["Ps22RandomAccessCollection", "init"]
+- !private ["Ps22RandomAccessCollection", "isEmpty"]
 - !private ["Ps22RandomAccessCollection", "subscript"]
 - !private ["Ps21RandomAccessIndexable", "Index"]
 - !private ["Ps21RandomAccessIndexable", "IndexDistance"]
@@ -376,6 +431,8 @@ depends-member:
 - !private ["Ps21RandomAccessIndexable", "count"]
 - !private ["Ps21RandomAccessIndexable", "enumerated"]
 - !private ["Ps21RandomAccessIndexable", "flatMap"]
+- !private ["Ps21RandomAccessIndexable", "init"]
+- !private ["Ps21RandomAccessIndexable", "isEmpty"]
 - !private ["Ps21RandomAccessIndexable", "subscript"]
 - !private ["Vs17RandomAccessSlice", "Index"]
 - !private ["Vs17RandomAccessSlice", "IndexDistance"]
@@ -393,6 +450,8 @@ depends-member:
 - !private ["Ps26RangeReplaceableCollection", "count"]
 - !private ["Ps26RangeReplaceableCollection", "enumerated"]
 - !private ["Ps26RangeReplaceableCollection", "flatMap"]
+- !private ["Ps26RangeReplaceableCollection", "init"]
+- !private ["Ps26RangeReplaceableCollection", "isEmpty"]
 - !private ["Ps26RangeReplaceableCollection", "subscript"]
 - !private ["Ps25RangeReplaceableIndexable", "Index"]
 - !private ["Ps25RangeReplaceableIndexable", "IndexDistance"]
@@ -403,6 +462,8 @@ depends-member:
 - !private ["Ps25RangeReplaceableIndexable", "count"]
 - !private ["Ps25RangeReplaceableIndexable", "enumerated"]
 - !private ["Ps25RangeReplaceableIndexable", "flatMap"]
+- !private ["Ps25RangeReplaceableIndexable", "init"]
+- !private ["Ps25RangeReplaceableIndexable", "isEmpty"]
 - !private ["Ps25RangeReplaceableIndexable", "subscript"]
 - !private ["Ps8Sequence", "Element"]
 - !private ["Ps8Sequence", "Index"]
@@ -415,6 +476,8 @@ depends-member:
 - !private ["Ps8Sequence", "count"]
 - !private ["Ps8Sequence", "enumerated"]
 - !private ["Ps8Sequence", "flatMap"]
+- !private ["Ps8Sequence", "init"]
+- !private ["Ps8Sequence", "isEmpty"]
 - !private ["Ps8Sequence", "subscript"]
 - !private ["Ps13SignedInteger", "IntegerLiteralType"]
 - !private ["Ps13SignedInteger", "Stride"]
@@ -439,7 +502,9 @@ depends-member:
 - !private ["Ps16TextOutputStream", "init"]
 - !private ["Ps20TextOutputStreamable", "components"]
 - !private ["Ps20TextOutputStreamable", "init"]
-- !private ["Su", "deinit"]
+- !private ["Su", "Stride"]
+- !private ["Su", "_DisabledRangeIndex"]
+- ["Su", "deinit"]
 - !private ["Su", "init"]
 - !private ["Vs6UInt16", "deinit"]
 - !private ["Vs6UInt32", "deinit"]
@@ -447,6 +512,8 @@ depends-member:
 - ["Vs5UInt8", "deinit"]
 - !private ["Vs5UInt8", "init"]
 - !private ["Sc", "deinit"]
+- !private ["Ps15UnsignedInteger", "Stride"]
+- !private ["Ps15UnsignedInteger", "_DisabledRangeIndex"]
 - !private ["Ps15UnsignedInteger", "init"]
 - !private ["Ps14_ArrayProtocol", "Index"]
 - !private ["Ps14_ArrayProtocol", "IndexDistance"]
@@ -457,6 +524,8 @@ depends-member:
 - !private ["Ps14_ArrayProtocol", "count"]
 - !private ["Ps14_ArrayProtocol", "enumerated"]
 - !private ["Ps14_ArrayProtocol", "flatMap"]
+- !private ["Ps14_ArrayProtocol", "init"]
+- !private ["Ps14_ArrayProtocol", "isEmpty"]
 - !private ["Ps14_ArrayProtocol", "subscript"]
 - !private ["Ps15_CVarArgAligned", "init"]
 - !private ["Ps22_CVarArgPassedAsDouble", "init"]
@@ -469,7 +538,11 @@ depends-member:
 - !private ["Ps24_DestructorSafeContainer", "count"]
 - !private ["Ps24_DestructorSafeContainer", "enumerated"]
 - !private ["Ps24_DestructorSafeContainer", "flatMap"]
+- !private ["Ps24_DestructorSafeContainer", "init"]
+- !private ["Ps24_DestructorSafeContainer", "isEmpty"]
 - !private ["Ps24_DestructorSafeContainer", "subscript"]
+- !private ["Ps28_DisallowMixedSignArithmetic", "Stride"]
+- !private ["Ps28_DisallowMixedSignArithmetic", "_DisabledRangeIndex"]
 - !private ["Ps28_DisallowMixedSignArithmetic", "init"]
 - !private ["Ps35_ExpressibleByBuiltinBooleanLiteral", "_getBuiltinLogicValue"]
 - !private ["Ps51_ExpressibleByBuiltinExtendedGraphemeClusterLiteral", "components"]
@@ -520,6 +593,7 @@ depends-member:
 - !private ["Ps21_ObjectiveCBridgeable", "enumerated"]
 - !private ["Ps21_ObjectiveCBridgeable", "flatMap"]
 - !private ["Ps21_ObjectiveCBridgeable", "init"]
+- !private ["Ps21_ObjectiveCBridgeable", "isEmpty"]
 - !private ["Ps21_ObjectiveCBridgeable", "subscript"]
 - !private ["Ps14_SignedInteger", "IntegerLiteralType"]
 - !private ["Ps14_SignedInteger", "Stride"]
@@ -534,7 +608,7 @@ depends-nominal:
 - !private "Ps16AbsoluteValuable"
 - "Ps9AnyObject"
 - "Sa"
-- !private "Vs10ArraySlice"
+- "Vs10ArraySlice"
 - !private "Ps23BidirectionalCollection"
 - !private "Ps22BidirectionalIndexable"
 - !private "Vs18BidirectionalSlice"
@@ -546,7 +620,8 @@ depends-nominal:
 - !private "V10Foundation12CharacterSet"
 - !private "Ps10Collection"
 - !private "Ps10Comparable"
-- !private "Vs20CountableClosedRange"
+- "Vs20CountableClosedRange"
+- !private "Vs14CountableRange"
 - !private "Ps28CustomDebugStringConvertible"
 - !private "Ps29CustomPlaygroundQuickLookable"
 - !private "Ps17CustomReflectable"
@@ -554,6 +629,7 @@ depends-nominal:
 - !private "Vs27DefaultBidirectionalIndices"
 - !private "Vs26DefaultRandomAccessIndices"
 - !private "Sd"
+- "V15AdjacencyMatrix4Edge"
 - !private "Vs18EnumeratedIterator"
 - "Vs18EnumeratedSequence"
 - !private "Ps9Equatable"
@@ -593,7 +669,7 @@ depends-nominal:
 - !private "PSo16NSObjectProtocol"
 - !private "PSo14NSSecureCoding"
 - !private "CSo8NSString"
-- !private "Sq"
+- "Sq"
 - !private "Ps22RandomAccessCollection"
 - !private "Ps21RandomAccessIndexable"
 - !private "Vs17RandomAccessSlice"
@@ -608,7 +684,7 @@ depends-nominal:
 - "SS"
 - !private "Ps16TextOutputStream"
 - !private "Ps20TextOutputStreamable"
-- !private "Su"
+- "Su"
 - !private "Vs6UInt16"
 - !private "Vs6UInt32"
 - !private "Vs6UInt64"
@@ -646,4 +722,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/ObjectiveC.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/CoreGraphics.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/IOKit.swiftmodule"
-interface-hash: "c69bfcb61d84339990793ed3119c979b"
+interface-hash: "8c288c658c8d923ff21748ea70d675be"
