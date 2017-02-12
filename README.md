@@ -1,1 +1,1 @@
-# AdjacencyMatrix - it program for build Adjacency Matrix from edges list and backward!
+# AdjacencyMatrix - it is program for build Adjacency Matrix from edges list and backward!
