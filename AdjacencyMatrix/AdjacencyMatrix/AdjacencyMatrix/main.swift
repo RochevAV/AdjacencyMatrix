@@ -8,5 +8,15 @@
 
 import Foundation
 
-print("Hello, World!")
+
+print("Lab 1 \n")
+
+let matrix = Matrix(fromString: "0 1 0 1 1 1 0 1 0 1 0 1 0 1 0 1 0 1 0 0 1 1 0 0 0")
+
+print(matrix)
+print(matrix.nodes())
+
+
+
+
 
